@@ -39,10 +39,13 @@ namespace Учет_отпусков
 
         public int Id
         {
-            get => default;
-            set
-            {
-            }
+            get ;
+            set;
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {Name} - дата начала {DateStart}";
         }
     }
 }

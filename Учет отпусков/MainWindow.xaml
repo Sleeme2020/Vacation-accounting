@@ -5,24 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_отпусков"
         mc:Ignorable="d"
-        Title="MainWindow" Height="683" Width="864">
-    <Grid Margin="0,0,0,0">
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,614,10"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="381,337,25,10" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Margin="490,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <TextBox HorizontalAlignment="Left" Margin="709,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="646,35,0,0" VerticalAlignment="Top"/>
-        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="381,35,0,0" VerticalAlignment="Top"/>
-        <Label Content="Отчество" HorizontalAlignment="Left" Margin="381,96,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="490,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <DatePicker HorizontalAlignment="Left" Margin="739,98,0,0" VerticalAlignment="Top"/>
-        <Label Content="Устроен" HorizontalAlignment="Left" Margin="676,97,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="739,146,0,0" VerticalAlignment="Top"/>
-        <Label Content="Уволен" HorizontalAlignment="Left" Margin="676,145,0,0" VerticalAlignment="Top"/>
-        <Label Content="Полных дней отпуска" HorizontalAlignment="Left" Margin="551,293,0,0" VerticalAlignment="Top"/>
-        <Label Name="DayFree" Content=" " HorizontalAlignment="Left" Margin="716,287,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button Content="Добавить" HorizontalAlignment="Left" Margin="381,301,0,0" VerticalAlignment="Top"/>
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="474,301,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
 
     </Grid>
 </Window>

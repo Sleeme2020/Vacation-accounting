@@ -45,7 +45,7 @@ namespace Учет_отпусков
 
         public override string ToString()
         {
-            return $"{FirstName} {Name} - дата начала {DateStart}";
+            return $"{FirstName} {Name} - дата начала {DateStart}"; 
         }
     }
 }

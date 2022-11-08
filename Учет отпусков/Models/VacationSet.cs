@@ -3,49 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Учет_отпусков
+namespace Учет_отпусков.Models
 {
-    public class Worker
+    public class VacationSet
     {
-        public string Name
+        public int Id { get; set; }
+        public int WorkerId
+        {
+            get;
+            set;
+        }
+        public Worker Worker
         {
             get;
             set;
         }
 
-        public string LastName
+        public DateOnly Date
         {
             get;
             set;
         }
 
-        public string FirstName
+        public int Period
         {
             get;
             set;
         }
 
-        public DateOnly DateStart
+        public int Val
         {
             get;
             set;
         }
 
-        public DateOnly DateEnd
+        public OperationType Operation
         {
             get;
             set;
-        }
-
-        public int Id
-        {
-            get ;
-            set;
-        }
-
-        public override string ToString()
-        {
-            return $"{FirstName} {Name} - дата начала {DateStart}"; 
         }
     }
 }

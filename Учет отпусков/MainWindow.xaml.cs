@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Учет_отпусков.Models;
+using Учет_отпусков.ViewModels;
 
 namespace Учет_отпусков
 {
@@ -20,9 +22,11 @@ namespace Учет_отпусков
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new WorkerViewModel();
         }
     }
 }

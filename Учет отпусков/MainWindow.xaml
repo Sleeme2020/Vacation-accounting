@@ -7,22 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="683" Width="864">
     <Grid Margin="0,0,0,0">
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,614,10"/>
+        <ListBox x:Name="ListWorker" ItemsSource="{Binding Workers}" Margin="10,10,614,10" SelectedItem="{Binding Worker}"/>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="381,337,25,10" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Margin="490,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <TextBox HorizontalAlignment="Left" Margin="709,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="490,39,0,0" TextWrapping="Wrap" Text="{Binding Worker.FirstName , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="145"/>
+        <TextBox HorizontalAlignment="Left" Margin="709,39,0,0" TextWrapping="Wrap" Text="{Binding Worker.Name , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="130"/>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="646,35,0,0" VerticalAlignment="Top"/>
         <Label Content="Фамилия" HorizontalAlignment="Left" Margin="381,35,0,0" VerticalAlignment="Top"/>
         <Label Content="Отчество" HorizontalAlignment="Left" Margin="381,96,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="490,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <DatePicker HorizontalAlignment="Left" Margin="739,98,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="490,100,0,0" TextWrapping="Wrap" Text="{Binding Worker.LastName , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="145"/>
+        <DatePicker HorizontalAlignment="Left" Margin="739,98,0,0" SelectedDate="{Binding Worker.DataStart , UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top"/>
         <Label Content="Устроен" HorizontalAlignment="Left" Margin="676,97,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="739,146,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="739,146,0,0" SelectedDate="{Binding Worker.DataStart , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
         <Label Content="Уволен" HorizontalAlignment="Left" Margin="676,145,0,0" VerticalAlignment="Top"/>
         <Label Content="Полных дней отпуска" HorizontalAlignment="Left" Margin="551,293,0,0" VerticalAlignment="Top"/>
+
         <Label Name="DayFree" Content=" " HorizontalAlignment="Left" Margin="716,287,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Button Content="Добавить" HorizontalAlignment="Left" Margin="381,301,0,0" VerticalAlignment="Top"/>
         <Button Content="Удалить" HorizontalAlignment="Left" Margin="474,301,0,0" VerticalAlignment="Top"/>
+        <Button Content="Сохранить" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.653" Height="27" Width="88" Command="{Binding EditCommand }" />
+        <Button Content="Новый" HorizontalAlignment="Left" Margin="789,213,0,0" VerticalAlignment="Top" Width="67" Height="22" Command="{Binding AddCommand}" />
+        <Button Content="X" HorizontalAlignment="Left" Margin="264,637,0,0" VerticalAlignment="Top" FontSize="16" Width="20" Command="{Binding DeleteCommand}"  />
+
 
     </Grid>
 </Window>
